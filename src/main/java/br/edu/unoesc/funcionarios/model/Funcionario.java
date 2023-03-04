@@ -29,4 +29,5 @@ public class Funcionario implements Serializable {
 	Integer numDep;
 	BigDecimal salario;
 	LocalDate nascimento;
+	String endereco;
 }

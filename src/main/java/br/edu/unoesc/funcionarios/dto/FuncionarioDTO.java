@@ -16,7 +16,8 @@ public class FuncionarioDTO implements Serializable {
 	String nome;
 	Integer numDep;
 	BigDecimal salario;
-	LocalDate nascimento;;
+	LocalDate nascimento;
+	String endereco;
 	
 	public FuncionarioDTO(Funcionario funcionario) {
 		this.id = funcionario.getId();
@@ -24,5 +25,6 @@ public class FuncionarioDTO implements Serializable {
 		this.numDep = funcionario.getNumDep();
 		this.salario = funcionario.getSalario();
 		this.nascimento = funcionario.getNascimento();
+		this.endereco = funcionario.getEndereco();
 	}
 }

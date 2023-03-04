@@ -100,6 +100,11 @@
 									Salário
 								</a>
 							</th>
+							<th>
+								<a th:href="@{'/funcionarios/paginas?pagina=0&ordenacao=endereco&direcao=' + ${direcaoReversa}} + '&nome=' + ${nome} + '&tamPagina=' + ${tamanhoPagina}">
+									Endereco
+								</a>
+							</th>
 							<th>Ação</th>
 						</tr>
 					</thead>
@@ -109,6 +114,7 @@
 							<td th:text="${funcionario.nome}">Senhor dos Anéis</td>
 							<td th:text="${funcionario.numDep}">42</td>
 							<td th:text="${funcionario.salario}">Tolkien</td>
+							<td th:text="${funcionario.endereco}">Rua X, Cidade Y, RJ</td>
 							<td>
 								<a class="btn btn-info btn-sm" th:href="@{/formFuncionarios/{id}(id=${funcionario.id})}" role="button"> 
 									<span class="oi oi-brush" title="Editar" aria-hidden="true"></span>							

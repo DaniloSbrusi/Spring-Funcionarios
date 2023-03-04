@@ -154,7 +154,6 @@ public class FuncionarioRestController {
     		@RequestParam(value = "tamPagina", defaultValue = "24") Integer tamPagina,
     		@RequestParam(value = "ordenacao", defaultValue = "nome") String campo,
     		@RequestParam(value = "direcao", defaultValue = "ASC") String direcao) {
-//    	System.out.println(nome + pagina + tamPagina + campo + direcao);
     	return ResponseEntity.ok(servico.buscaPaginadaPorNome(nome, pagina, tamPagina, campo, direcao));
     }
 }

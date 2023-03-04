@@ -17,6 +17,7 @@ public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> 
 	public List<Funcionario> findByNomeContainingIgnoreCase(String nome);
 	
 	public Page<Funcionario> findByNomeContainingIgnoreCase(String nome, Pageable pagina);
+	public Page<Funcionario> findByEnderecoContainingIgnoreCase(String nome, Pageable pagina);
 	
 	@Query("Select f from Funcionario f where f.salario >= :min and f.salario <= :max")
 	public List<Funcionario> porFaixaSalarial(@Param("min") BigDecimal min,

@@ -28,11 +28,11 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	@Override
 	public void popularTabelaInicial() {
 		repositorio.saveAll(List.of(
-				new Funcionario(null, "Fulano", 0, new BigDecimal("123.45"), LocalDate.of(2000, 10, 5)),
-				new Funcionario(null, "Beltrano", 2, new BigDecimal("42.42"), LocalDate.of(2001, 12, 28)),
-				new Funcionario(null, "Sicrano", 3, new BigDecimal("666"), LocalDate.of(1975, 6, 6)),
-				new Funcionario(null, "Maria das Dores", 4, new BigDecimal("4999.99"), LocalDate.of(1985, 8, 17)),
-				new Funcionario(null, "Zé das Couves", 0, new BigDecimal("123.45"), LocalDate.of(2000, 5, 10))
+				new Funcionario(null, "Fulano", 0, new BigDecimal("123.45"), LocalDate.of(2000, 10, 5), "Rua da Limeira, Centro, Joaçaba, SC"),
+				new Funcionario(null, "Beltrano", 2, new BigDecimal("42.42"), LocalDate.of(2001, 12, 28), "Avenida Caetano Natal Branco, Luzerna, SC"),
+				new Funcionario(null, "Sicrano", 3, new BigDecimal("666"), LocalDate.of(1975, 6, 6), "BR 101, KM 27, Itajaí, SC"),
+				new Funcionario(null, "Maria das Dores", 4, new BigDecimal("4999.99"), LocalDate.of(1985, 8, 17), "Travessa Arnaldo, Ibicaré, SC"),
+				new Funcionario(null, "Zé das Couves", 0, new BigDecimal("123.45"), LocalDate.of(2000, 5, 10), "Rua das Couves, Papanduva, SC")
 			)
 		);
 	}
@@ -57,6 +57,7 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 		l.setNumDep(funcionario.getNumDep());
 		l.setSalario(funcionario.getSalario());
 		l.setNascimento(funcionario.getNascimento());
+		l.setEndereco(funcionario.getEndereco());
 		
 		return repositorio.save(l);
 	}

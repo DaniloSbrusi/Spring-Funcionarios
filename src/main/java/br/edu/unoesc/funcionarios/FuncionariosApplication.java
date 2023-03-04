@@ -68,6 +68,7 @@ public class FuncionariosApplication {
 			a.setNumDep(1);
 			a.setSalario(new BigDecimal("9000.00"));
 			a.setNascimento(LocalDate.of(1990, 2, 12));
+			a.setEndereco("Rua XX");
 			
 			if (a.getId() == null) {
 				servico.incluir(a);
